@@ -1,6 +1,7 @@
 {
-  "name": "Color Picker",
-  "description": "Pick color with ease",
+  "name": "ultimate-color-picker",
+  "displayName": "Ultimate Color Picker",
+  "description": "Pick color with ease, all in one ultimate version color picker tool that satisfy all your needs.",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -15,6 +16,7 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
+    "i": "^0.3.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
