@@ -1,27 +1,28 @@
-import "./App.css";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "../../src/components/ui";
+import { routes } from "../../src/data";
 
 function App() {
-  const handleColorPick = async () => {
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    await chrome.scripting.executeScript({
-      target: { tabId: tab.id as number },
-      func: () => {
-        console.log("executeScript Tab : ", tab.id);
-      },
-    });
-  };
-
   return (
-    <section id="app">
-      <h1>Color Picker</h1>
+    <Tabs defaultValue={routes[0].value} className="max-w-[400px] ">
+      {routes?.map((val) => (
+        <TabsContent value={val.value} key={val.value} className="p-10">
+          <val.components />
+        </TabsContent>
+      ))}
 
-      <div>
-        <button className="btn" onClick={handleColorPick}>
-          🎨
-        </button>
-      </div>
-    </section>
+      <TabsList className="flex items-center justify-between">
+        {routes?.map((val) => (
+          <TabsTrigger key={val.value} value={val.value}>
+            <val.icon />
+          </TabsTrigger>
+        ))}
+      </TabsList>
+    </Tabs>
   );
 }
 
