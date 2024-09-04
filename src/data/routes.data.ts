@@ -1,4 +1,9 @@
-import { Dropper, PaintBrush, WebsiteResponsive } from "../components/icons";
+import {
+  Dropper,
+  PaintBrush,
+  WebsiteResponsive,
+  Palette as PaletteIcon,
+} from "../components/icons";
 
 import {
   MainColors,
@@ -18,7 +23,7 @@ export const routes = [
     name: "B",
     value: "Palette",
     components: Palette,
-    icon: Palette,
+    icon: PaletteIcon,
   },
   {
     name: "C",

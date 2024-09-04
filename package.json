@@ -1,6 +1,5 @@
 {
   "name": "ultimate-color-picker",
-  "displayName": "Ultimate Color Picker",
   "description": "Pick color with ease, all in one ultimate version color picker tool that satisfy all your needs.",
   "private": true,
   "version": "0.0.1",
@@ -17,6 +16,7 @@
   },
   "dependencies": {
     "@radix-ui/react-tabs": "^1.1.0",
+    "@uidotdev/usehooks": "^2.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "i": "^0.3.7",
